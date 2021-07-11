@@ -30,6 +30,7 @@ seatle.getAverageCookies();
 console.log(seatle.randomcustomers);
 console.log(seatle.AverageCookies);
 
+Seatle.render=function(){
 let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
@@ -44,6 +45,8 @@ for (let i = 0; i < 15; i++) {
     liElement.textContent= [i];
 SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
 }
+}
+Seatle.render();
 
 let Tokyo={
     name:'Tokyo',
@@ -72,6 +75,7 @@ let Tokyo={
     console.log(seatle.randomcustomers);
     console.log(seatle.AverageCookies);
 
+    Tokyo.render=function(){
     let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
@@ -86,6 +90,8 @@ for (let i = 0; i < 15; i++) {
     liElement.textContent= [i];
 SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
 }
+    }
+    Tokyo.render();
 
     let Dubai={
         name:'Dubai',
@@ -109,12 +115,12 @@ SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
             }
         }
         }
-        
         seatle.getrandomcustomers();
         seatle.getAverageCookies();
         console.log(seatle.randomcustomers);
         console.log(seatle.AverageCookies);
 
+        Dubai.render=function(){
         let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
@@ -129,7 +135,8 @@ for (let i = 0; i < 15; i++) {
     liElement.textContent= [i];
 SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
 }
-
+        }
+    Dubai.render();
 
 
         let Lima={
@@ -159,7 +166,8 @@ SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
             seatle.getAverageCookies();
             console.log(seatle.randomcustomers);
             console.log(seatle.AverageCookies);
-    
+
+            Lima.render=function(){
             let SalmonCookies=document.getElementById('SalmonCookies')
             console.log(SalmonCookies);
             
@@ -174,6 +182,9 @@ SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
                 liElement.textContent= [i];
             SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
             }
+        }
+        Lima.render();
+
             
 
 
