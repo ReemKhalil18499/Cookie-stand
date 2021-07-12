@@ -46,25 +46,21 @@ for (let i = 0; i < 14; i++) {
    let liElement= document.createElement('li');
     SalmonCookies2.appendChild(liElement);
     liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${seatle.SalmonCookies2[i]} Cookies`)
+ SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
 
-if (i == 13) {
+if (i ==13) {
     let Total = 0
     for (let j = 0; j < 14; j++) {
-
-        Total = this.avgCookiesperHour[j] + Total
-
+    Total =this.AverageCookieshrs[j] + Total;
     }
     liElement = document.createElement('li');
     SalmonCookies2.appendChild(liElement);
     liElement.textContent = `Total is ${Total}`
-
-
-
-}
-
+    }
 }
 }
+
+
 seatle.render();
 
 let Tokyo={
@@ -105,15 +101,15 @@ SalmonCookies.appendChild(SalmonCookies2);
 
 for (let i = 0; i < 15; i++) {
    let liElement= document.createElement('li');
-    ulElement.appendChild(liElement);
+   SalmonCookies2.appendChild(liElement);
     liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
 
 if (i == 13) {
     let Total = 0
     for (let j = 0; j < 14; j++) {
 
-        Total = this.avgCookiesperHour[j] + Total
+        Total = this.AverageCookieshrs[j] + Total
 
     }
     liElement = document.createElement('li');
@@ -165,15 +161,15 @@ SalmonCookies.appendChild(SalmonCookies2);
 
 for (let i = 0; i < 15; i++) {
    let liElement= document.createElement('li');
-    ulElement.appendChild(liElement);
+   SalmonCookies2.appendChild(liElement);
     liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
 
 if (i == 13) {
     let Total = 0
     for (let j = 0; j < 14; j++) {
 
-        Total = this.avgCookiesperHour[j] + Total
+        Total = this.AverageCookieshrs[j] + Total
 
     }
     liElement = document.createElement('li');
@@ -227,15 +223,15 @@ if (i == 13) {
             
             for (let i = 0; i < 15; i++) {
                let liElement= document.createElement('li');
-                ulElement.appendChild(liElement);
+               SalmonCookies2.appendChild(liElement);
                 liElement.textContent= [i];
-            SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+            SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
 
             if (i == 13) {
                 let Total = 0
                 for (let j = 0; j < 14; j++) {
             
-                    Total = this.avgCookiesperHour[j] + Total
+                    Total = this.AverageCookieshrs[j]+ Total
             
                 }
                 liElement = document.createElement('li');
