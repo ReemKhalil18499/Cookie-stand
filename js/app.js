@@ -1,8 +1,11 @@
 'use strict';
 
 let hrs=['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-let Seatle={
+let seatle={
 name:'Seatle',
 minimum: 23,
 maximum:65 ,
@@ -12,7 +15,7 @@ AverageCookies:[],
 
 getrandomcustomers:function(){
     for (let i=0; i<14; i++){
-        let random2=random1(this.minimum,this.maximum)
+        let random2=random(this.minimum,this.maximum)
         this.randomcustomers.push(random2)
     }
 },
@@ -30,7 +33,7 @@ seatle.getAverageCookies();
 console.log(seatle.randomcustomers);
 console.log(seatle.AverageCookies);
 
-Seatle.render=function(){
+seatle.render=function(){
 let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
@@ -39,14 +42,30 @@ console.log (SalmonCookies2);
 
 SalmonCookies.appendChild(SalmonCookies2);
 
-for (let i = 0; i < 15; i++) {
+for (let i = 0; i < 14; i++) {
    let liElement= document.createElement('li');
-    ulElement.appendChild(liElement);
+    SalmonCookies2.appendChild(liElement);
     liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+SalmonCookies2.textContent=(`${hrs[i]} ${seatle.SalmonCookies2[i]} Cookies`)
+
+if (i == 13) {
+    let Total = 0
+    for (let j = 0; j < 14; j++) {
+
+        Total = this.avgCookiesperHour[j] + Total
+
+    }
+    liElement = document.createElement('li');
+    SalmonCookies2.appendChild(liElement);
+    liElement.textContent = `Total is ${Total}`
+
+
+
+}
+
 }
 }
-Seatle.render();
+seatle.render();
 
 let Tokyo={
     name:'Tokyo',
@@ -89,6 +108,21 @@ for (let i = 0; i < 15; i++) {
     ulElement.appendChild(liElement);
     liElement.textContent= [i];
 SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+
+if (i == 13) {
+    let Total = 0
+    for (let j = 0; j < 14; j++) {
+
+        Total = this.avgCookiesperHour[j] + Total
+
+    }
+    liElement = document.createElement('li');
+    SalmonCookies2.appendChild(liElement);
+    liElement.textContent = `Total is ${Total}`
+
+
+
+}
 }
     }
     Tokyo.render();
@@ -134,6 +168,21 @@ for (let i = 0; i < 15; i++) {
     ulElement.appendChild(liElement);
     liElement.textContent= [i];
 SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+
+if (i == 13) {
+    let Total = 0
+    for (let j = 0; j < 14; j++) {
+
+        Total = this.avgCookiesperHour[j] + Total
+
+    }
+    liElement = document.createElement('li');
+    SalmonCookies2.appendChild(liElement);
+    liElement.textContent = `Total is ${Total}`
+
+
+
+}
 }
         }
     Dubai.render();
@@ -181,6 +230,21 @@ SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
                 ulElement.appendChild(liElement);
                 liElement.textContent= [i];
             SalmonCookies2.textContent=(`${hrs[i]} ${Seatle.SalmonCookies2[i]} Cookies`)
+
+            if (i == 13) {
+                let Total = 0
+                for (let j = 0; j < 14; j++) {
+            
+                    Total = this.avgCookiesperHour[j] + Total
+            
+                }
+                liElement = document.createElement('li');
+                SalmonCookies2.appendChild(liElement);
+                liElement.textContent = `Total is ${Total}`
+            
+            
+            
+            }
             }
         }
         Lima.render();
