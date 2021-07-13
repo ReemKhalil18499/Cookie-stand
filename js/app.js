@@ -32,15 +32,15 @@ let trow;
 let parent;
 let table;
 let tdata;
+let div;
 function header(){
-parent=document.getElementById("Restaurant");
 table=document.createElement("table");
 parent.appendchild(table);
 trow=document.createElement("tr");
 table.appendChild(trow);
 thead=document.createElement("th");
 trow.appendChild(thead);
-thead.textContent=""
+thead.textContent="";
 
 for (let i=0; i<13; i++) {
 thead=document.createElement('th');
@@ -65,6 +65,7 @@ trow.appendchild(tdata);
 tdata.textContent=`${this.AverageCookies[i]}`
 }
 }
+
 for (let i=0;i<shop.length; i++) {
     console.log(shop[i]);
     shop[i].randomcustomers();
