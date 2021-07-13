@@ -48,19 +48,17 @@ for (let i = 0; i < 14; i++) {
     liElement.textContent= [i];
  SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
 
-if (i ==13) {
-    let Total = 0
-    for (let j = 0; j < 14; j++) {
-    Total =this.AverageCookieshrs[j] + Total;
-    }
+if (i==13) {
+    let Total = 0;
+    for (let j=0; j<14; j++) {
+    Total =this.AverageCookieshrs[j]+Total;
     liElement = document.createElement('li');
     SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`
+    liElement.textContent = (`Total is ${Total}`)
     }
 }
 }
-
-
+}
 seatle.render();
 
 let Tokyo={
