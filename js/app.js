@@ -15,14 +15,13 @@ AverageCookies:[],
 
 getrandomcustomers:function(){
     for (let i=0; i<14; i++){
-        let random2=random(this.minimum,this.maximum)
-        this.randomcustomers.push(random2)
+        this.randomcustomers.push(random(this.minimum,this.maximum));
     }
 },
 
 getAverageCookies:function() {
     for (let i=0; i<14; i++) {
-        this.AverageCookies.push(this.randomcustomers[i]*this.Average); 
+        this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
 
     }
 }
@@ -37,30 +36,32 @@ seatle.render=function(){
 let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
+let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Seatle';
+
 let SalmonCookies2=document.createElement('ul');
 console.log (SalmonCookies2);
-
 SalmonCookies.appendChild(SalmonCookies2);
+
+
 
 for (let i = 0; i < 14; i++) {
    let liElement= document.createElement('li');
     SalmonCookies2.appendChild(liElement);
-    liElement.textContent= [i];
- SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
+ liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
 
-if (i ==13) {
-    let Total = 0
-    for (let j = 0; j < 14; j++) {
-    Total =this.AverageCookieshrs[j] + Total;
-    }
+if (i==13) {
+    let Total = 0;
+    for (let j=0; j<14; j++) {
+    Total =this.AverageCookies[j]+Total};
     liElement = document.createElement('li');
     SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`
+    liElement.textContent = `Total is ${Total}`;
     }
 }
 }
-
-
 seatle.render();
 
 let Tokyo={
@@ -70,58 +71,56 @@ let Tokyo={
     Average:1.2,
     randomcustomers:[],
     AverageCookies:[],
-
+    
     getrandomcustomers:function(){
         for (let i=0; i<14; i++){
-            let random2=random1(this.minimum,this.maximum)
-            this.randomcustomers.push(random2)
+            this.randomcustomers.push(random(this.minimum,this.maximum));
         }
     },
     
     getAverageCookies:function() {
         for (let i=0; i<14; i++) {
-            this.AverageCookies.push(this.randomcustomers[i]*this.Average); 
+            this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
     
         }
     }
     }
-    seatle.getrandomcustomers();
-    seatle.getAverageCookies();
-    console.log(seatle.randomcustomers);
-    console.log(seatle.AverageCookies);
-
+    
+    Tokyo.getrandomcustomers();
+    Tokyo.getAverageCookies();
+    console.log(Tokyo.randomcustomers);
+    console.log(Tokyo.AverageCookies);
+    
     Tokyo.render=function(){
     let SalmonCookies=document.getElementById('SalmonCookies')
-console.log(SalmonCookies);
-
-let SalmonCookies2=document.createElement('ul');
-console.log (SalmonCookies2);
-
-SalmonCookies.appendChild(SalmonCookies2);
-
-for (let i = 0; i < 15; i++) {
-   let liElement= document.createElement('li');
-   SalmonCookies2.appendChild(liElement);
-    liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
-
-if (i == 13) {
-    let Total = 0
-    for (let j = 0; j < 14; j++) {
-
-        Total = this.AverageCookieshrs[j] + Total
-
+    console.log(SalmonCookies);
+    let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Tokyo';
+    
+    let SalmonCookies2=document.createElement('ul');
+    console.log (SalmonCookies2);
+    
+    SalmonCookies.appendChild(SalmonCookies2);
+    
+    for (let i = 0; i < 14; i++) {
+       let liElement= document.createElement('li');
+        SalmonCookies2.appendChild(liElement);
+     liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
+    
+    if (i==13) {
+        let Total = 0;
+        for (let j=0; j<14; j++) {
+        Total =this.AverageCookies[j]+Total};
+        liElement = document.createElement('li');
+        SalmonCookies2.appendChild(liElement);
+        liElement.textContent = `Total is ${Total}`;
+        }
     }
-    liElement = document.createElement('li');
-    SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`
-
-
-
-}
-}
     }
     Tokyo.render();
+    
 
     let Dubai={
         name:'Dubai',
@@ -130,59 +129,115 @@ if (i == 13) {
         Average:3.7,
         randomcustomers:[],
         AverageCookies:[],
-    
+        
         getrandomcustomers:function(){
             for (let i=0; i<14; i++){
-                let random2=random1(this.minimum,this.maximum)
-                this.randomcustomers.push(random2)
+                this.randomcustomers.push(random(this.minimum,this.maximum));
             }
         },
         
         getAverageCookies:function() {
             for (let i=0; i<14; i++) {
-                this.AverageCookies.push(this.randomcustomers[i]*this.Average); 
+                this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
         
             }
         }
         }
-        seatle.getrandomcustomers();
-        seatle.getAverageCookies();
-        console.log(seatle.randomcustomers);
-        console.log(seatle.AverageCookies);
-
+        
+        Dubai.getrandomcustomers();
+        Dubai.getAverageCookies();
+        console.log(Dubai.randomcustomers);
+        console.log(Dubai.AverageCookies);
+        
         Dubai.render=function(){
         let SalmonCookies=document.getElementById('SalmonCookies')
-console.log(SalmonCookies);
+        console.log(SalmonCookies);
 
-let SalmonCookies2=document.createElement('ul');
-console.log (SalmonCookies2);
-
-SalmonCookies.appendChild(SalmonCookies2);
-
-for (let i = 0; i < 15; i++) {
-   let liElement= document.createElement('li');
-   SalmonCookies2.appendChild(liElement);
-    liElement.textContent= [i];
-SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
-
-if (i == 13) {
-    let Total = 0
-    for (let j = 0; j < 14; j++) {
-
-        Total = this.AverageCookieshrs[j] + Total
-
-    }
-    liElement = document.createElement('li');
-    SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`
-
-
-
-}
-}
+        let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Dubai';
+        
+        let SalmonCookies2=document.createElement('ul');
+        console.log (SalmonCookies2);
+        
+        SalmonCookies.appendChild(SalmonCookies2);
+        
+        for (let i = 0; i < 14; i++) {
+           let liElement= document.createElement('li');
+            SalmonCookies2.appendChild(liElement);
+         liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
+        
+        if (i==13) {
+            let Total = 0;
+            for (let j=0; j<14; j++) {
+            Total =this.AverageCookies[j]+Total};
+            liElement = document.createElement('li');
+            SalmonCookies2.appendChild(liElement);
+            liElement.textContent = `Total is ${Total}`;
+            }
         }
-    Dubai.render();
+        }
+        Dubai.render();
+        
+        let Paris={
+            name:'Paris',
+            minimum: 20,
+            maximum:38 ,
+            Average:2.3,
+            randomcustomers:[],
+            AverageCookies:[],
+            
+            getrandomcustomers:function(){
+                for (let i=0; i<14; i++){
+                    this.randomcustomers.push(random(this.minimum,this.maximum));
+                }
+            },
+            
+            getAverageCookies:function() {
+                for (let i=0; i<14; i++) {
+                    this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
+            
+                }
+            }
+            }
+            
+            Paris.getrandomcustomers();
+            Paris.getAverageCookies();
+            console.log(Paris.randomcustomers);
+            console.log(Paris.AverageCookies);
+            
+            Paris.render=function(){
+            let SalmonCookies=document.getElementById('SalmonCookies')
+            console.log(SalmonCookies);
 
+            let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Paris';
+            
+            let SalmonCookies2=document.createElement('ul');
+            console.log (SalmonCookies2);
+            
+            SalmonCookies.appendChild(SalmonCookies2);
+            
+            for (let i = 0; i < 14; i++) {
+               let liElement= document.createElement('li');
+                SalmonCookies2.appendChild(liElement);
+             liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
+            
+            if (i==13) {
+                let Total = 0;
+                for (let j=0; j<14; j++) {
+                Total =this.AverageCookies[j]+Total};
+                liElement = document.createElement('li');
+                SalmonCookies2.appendChild(liElement);
+                liElement.textContent = `Total is ${Total}`;
+                }
+            }
+            }
+            Paris.render();
+            
 
         let Lima={
             name:'Lima',
@@ -191,61 +246,58 @@ if (i == 13) {
             Average:4.6,
             randomcustomers:[],
             AverageCookies:[],
-        
+            
             getrandomcustomers:function(){
                 for (let i=0; i<14; i++){
-                    let random2=random1(this.minimum,this.maximum)
-                    this.randomcustomers.push(random2)
+                    this.randomcustomers.push(random(this.minimum,this.maximum));
                 }
             },
             
             getAverageCookies:function() {
                 for (let i=0; i<14; i++) {
-                    this.AverageCookies.push(this.randomcustomers[i]*this.Average); 
+                    this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
             
                 }
             }
             }
             
-            seatle.getrandomcustomers();
-            seatle.getAverageCookies();
-            console.log(seatle.randomcustomers);
-            console.log(seatle.AverageCookies);
-
+            Lima.getrandomcustomers();
+            Lima.getAverageCookies();
+            console.log(Lima.randomcustomers);
+            console.log(Lima.AverageCookies);
+            
             Lima.render=function(){
             let SalmonCookies=document.getElementById('SalmonCookies')
             console.log(SalmonCookies);
+
+            let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Lima';
             
             let SalmonCookies2=document.createElement('ul');
             console.log (SalmonCookies2);
             
             SalmonCookies.appendChild(SalmonCookies2);
             
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 14; i++) {
                let liElement= document.createElement('li');
-               SalmonCookies2.appendChild(liElement);
-                liElement.textContent= [i];
-            SalmonCookies2.textContent=(`${hrs[i]} ${seatle.AverageCookies[i]} Cookies`)
-
-            if (i == 13) {
-                let Total = 0
-                for (let j = 0; j < 14; j++) {
+                SalmonCookies2.appendChild(liElement);
+             liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
             
-                    Total = this.AverageCookieshrs[j]+ Total
-            
-                }
+            if (i==13) {
+                let Total = 0;
+                for (let j=0; j<14; j++) {
+                Total =this.AverageCookies[j]+Total};
                 liElement = document.createElement('li');
                 SalmonCookies2.appendChild(liElement);
-                liElement.textContent = `Total is ${Total}`
-            
-            
-            
+                liElement.textContent = `Total is ${Total}`;
+                }
             }
             }
-        }
-        Lima.render();
-
+            Lima.render();
             
+    
 
 
 
