@@ -36,10 +36,16 @@ seatle.render=function(){
 let SalmonCookies=document.getElementById('SalmonCookies')
 console.log(SalmonCookies);
 
+let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Seatle';
+
 let SalmonCookies2=document.createElement('ul');
 console.log (SalmonCookies2);
-
 SalmonCookies.appendChild(SalmonCookies2);
+
+
 
 for (let i = 0; i < 14; i++) {
    let liElement= document.createElement('li');
@@ -88,6 +94,10 @@ let Tokyo={
     Tokyo.render=function(){
     let SalmonCookies=document.getElementById('SalmonCookies')
     console.log(SalmonCookies);
+    let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Tokyo';
     
     let SalmonCookies2=document.createElement('ul');
     console.log (SalmonCookies2);
@@ -142,6 +152,11 @@ let Tokyo={
         Dubai.render=function(){
         let SalmonCookies=document.getElementById('SalmonCookies')
         console.log(SalmonCookies);
+
+        let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Dubai';
         
         let SalmonCookies2=document.createElement('ul');
         console.log (SalmonCookies2);
@@ -165,6 +180,64 @@ let Tokyo={
         }
         Dubai.render();
         
+        let Paris={
+            name:'Paris',
+            minimum: 20,
+            maximum:38 ,
+            Average:2.3,
+            randomcustomers:[],
+            AverageCookies:[],
+            
+            getrandomcustomers:function(){
+                for (let i=0; i<14; i++){
+                    this.randomcustomers.push(random(this.minimum,this.maximum));
+                }
+            },
+            
+            getAverageCookies:function() {
+                for (let i=0; i<14; i++) {
+                    this.AverageCookies.push(Math.floor(this.randomcustomers[i]*this.Average)); 
+            
+                }
+            }
+            }
+            
+            Paris.getrandomcustomers();
+            Paris.getAverageCookies();
+            console.log(Paris.randomcustomers);
+            console.log(Paris.AverageCookies);
+            
+            Paris.render=function(){
+            let SalmonCookies=document.getElementById('SalmonCookies')
+            console.log(SalmonCookies);
+
+            let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Paris';
+            
+            let SalmonCookies2=document.createElement('ul');
+            console.log (SalmonCookies2);
+            
+            SalmonCookies.appendChild(SalmonCookies2);
+            
+            for (let i = 0; i < 14; i++) {
+               let liElement= document.createElement('li');
+                SalmonCookies2.appendChild(liElement);
+             liElement.textContent=`${hrs[i]} ${this.AverageCookies[i]} Cookies`;
+            
+            if (i==13) {
+                let Total = 0;
+                for (let j=0; j<14; j++) {
+                Total =this.AverageCookies[j]+Total};
+                liElement = document.createElement('li');
+                SalmonCookies2.appendChild(liElement);
+                liElement.textContent = `Total is ${Total}`;
+                }
+            }
+            }
+            Paris.render();
+            
 
         let Lima={
             name:'Lima',
@@ -196,6 +269,11 @@ let Tokyo={
             Lima.render=function(){
             let SalmonCookies=document.getElementById('SalmonCookies')
             console.log(SalmonCookies);
+
+            let h1name=document.createElement('h1');
+console.log(h1name);
+SalmonCookies.appendChild(h1name);
+h1name.textContent='Lima';
             
             let SalmonCookies2=document.createElement('ul');
             console.log (SalmonCookies2);
