@@ -10,12 +10,12 @@ let shops = [];
 function Shop(location, minimum, maximum, AverageCookies) {
     this.location = location;
     this.minimum = minimum;
-    this.maximum = maximum;
-    this.randomcustomers = [];
+    this.maximum = maximum;     
     this.AverageCookies =AverageCookies;
+    this.randomcustomers = [];
     this.totalCookiesperday = 0;
     this.Customerseachhr = [];
-    this.Cookieseachhr = [];
+    this.Cookieseachhr=[];
     this.getrandomcustomers();
     this.getAverageCookies();
     console.log(this);
@@ -63,64 +63,54 @@ function header() {
     headerRow.appendChild(firsTh);
     firsTh.textContent = 'name';
     for (let i = 0; i < hrs.length; i++) {
-        let hoursTh = document.createElement('th');
-        headerRow.appendChild(hoursTh);
-        hoursTh.textContent = hrs[i];
+        let firsTh = document.createElement('th');
+        headerRow.appendChild(firsTh);
+        firsTh.textContent = hrs[i];
     }
-
-
-    for (let i = 0; i < hrs.length; i++) {
-        console.log(hrs[i]);
-    }
-    let totalOfTotals = 0;
-    for (let i = 0; i < hrs.length; i++) {
-        console.log(hrs[i]);
-        let totalForEachHr = 0;
-        for (let j = 0; j < shops.length; j++) {
-            totalForEachHr += shops[j];
-            Cookieseachhr[i];
-            totalOfTotals += shops[j];
-            Cookieseachhr[i];
-        }
-        console.log(totalForEachHr);
-        console.log('Totals', totalOfTotals);
-        let footerTh = document.createElement('th');
-        footerRow.appendChild(footerTh);
-        footerTh.textContent = totalForEachHr;
-    }
-    let lastTh = document.createElement('th');
-    headerRow.appendChild(lastTh);
-    lastTh.textContent = "daily location total"
+    firsTh = document.createElement('th');
+    headerRow.appendChild(firsTh);
+    firsTh.textContent ="daily location total"
 }
+
 Shop.prototype.render = function () {
     let dataRow = document.createElement("tr");
     table.appendChild(dataRow);
     let nameTd = document.createElement("td");
-    dataRow.appendchild(nameTd);
-    nameTd.textContent = this.locationname;
-
+    dataRow.appendChild(nameTd);
+    nameTd.textContent = this.location;
+    let summ=0
     for (let i = 0; i < hrs.length; i++) {
         let cookiestd = document.createElement("td");
-        dataRow.appendchild(cookiestd);
+        dataRow.appendChild(cookiestd);
         cookiestd.textContent = this.Cookieseachhr[i];
+        summ+=this.Cookieseachhr[i];
     }
     let totalTd = document.createElement('td');
-    dataRow.appendchild(totalTd);
-    totalTd.textContent = this
-    totalCookiesperday;
+    dataRow.appendChild(totalTd);
+    totalTd.textContent = summ
 }
 
 function footer() {
+ let totalAll=0;
     let footerRow = document.createElement('tr');
-    table.appendchild(footerRow);
+    table.appendChild(footerRow);
     let firstTh = document.createElement('th');
-    footerRow.appendchild(firstTh);
+    footerRow.appendChild(firstTh);
     firstTh.textContent = 'Totals'
     for (let i = 0; i < hrs.length; i++) {
-        console.log(hrs[i]);
-        let totalForEachHr = 0;
-        console.log(totalForEachHr + 50);
+        let sum=0
+        for (let j = 0; j < shops.length; j++) {
+           totalAll+=shops[j].Cookieseachhr[i] 
+           sum+= shops[j].Cookieseachhr[i]
+        }
+        firstTh = document.createElement('th');
+    footerRow.appendChild(firstTh);
+    firstTh.textContent =sum;
+        
     }
+    firstTh = document.createElement('th');
+    footerRow.appendChild(firstTh);
+    firstTh.textContent =totalAll;
 }
 console.log(shops);
 header();
