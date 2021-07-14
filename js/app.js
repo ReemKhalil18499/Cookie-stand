@@ -1,3 +1,4 @@
+
 'use strict';
 
 let hrs = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -43,6 +44,7 @@ let Tokyo = new Shop("Tokyo", 3, 24, 1.2);
 let Dubai = new Shop("Dubai", 11, 38, 3.7);
 let Paris = new Shop("Paris", 20, 38, 2.3);
 let Lima = new Shop("Lima", 2, 16, 4.6);
+
 
 
 
@@ -152,6 +154,8 @@ function formsSub(event) {
 
 
 footer();
+
 }
 
 footer();
+
