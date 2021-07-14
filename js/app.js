@@ -18,7 +18,7 @@ function Shop(location, minimum, maximum, AverageCookies) {
     this.Cookieseachhr=[];
     this.getrandomcustomers();
     this.getAverageCookies();
-    console.log(this);
+    
     shops.push(this);
 }
 
@@ -45,11 +45,10 @@ let Paris = new Shop("Paris", 20, 38, 2.3);
 let Lima = new Shop("Lima", 2, 16, 4.6);
 
 
-console.log(seatle);
 
-console.log(shops);
+
 for (let i = 0; i < shops.length; i++) {
-    console.log(shops[i]);
+   
     shops[i].getrandomcustomers();
     shops[i].getAverageCookies();
 
@@ -65,7 +64,7 @@ if (i==13) {
  
 }
 let parent = document.getElementById('shop');
-console.log(shops);
+
 let table = document.createElement('table');
 parent.appendChild(table);
 
@@ -102,10 +101,10 @@ Shop.prototype.render = function () {
     dataRow.appendChild(totalTd);
     totalTd.textContent = summ
 }
-
+let footerRow;
 function footer() {
  let totalAll=0;
-    let footerRow = document.createElement('tr');
+     footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
@@ -125,7 +124,7 @@ function footer() {
     footerRow.appendChild(firstTh);
     firstTh.textContent =totalAll;
 }
-console.log(shops);
+
 header();
 for (let i = 0; i < shops.length; i++) {
     shops[i].getrandomcustomers();
@@ -134,30 +133,25 @@ for (let i = 0; i < shops.length; i++) {
 }
 
 
-let forms=document.getElementById('form');
-forms.addEventListener('submit',formsSub);
+let form=document.getElementById('form');
+form.addEventListener('submit',formsSub);
 function formsSub(event) {
     event.preventDefault();
    
     let location=event.target.location.value;
     let minimum=parseInt(event.target.minimum.value);
+    console.log(event);
     let maximum=parseInt(event.target.maximum.value);
     let AverageCookies=parseInt(event.target.AverageCookies.value);
-    let newLocation = new Shop(location, minimum, maximum, AverageCookies);
+    let newName= new Shop(location, minimum, maximum, AverageCookies);
 
-footerRow.textContent =``;
-newLocation.getrandomcustomers();
-    newLocation.getAverageCookies();
-    newLocation.render();
+    footerRow.textContent =``;
+    newName.getrandomcustomers();
+    newName.getAverageCookies();
+    newName.render();
 
 
 footer();
 }
-
-
-
-
-
-
 
 footer();
