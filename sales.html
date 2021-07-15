@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
+
     <a href="index.html"><</a>
 
     <meta charset="UTF-8">
@@ -27,6 +28,9 @@
                 id="username">
                 <br>
                 <br>
+
+    <header></header>
+   
 
                 <label for="numberField">Minimum</label>
                 <input type="Minimum"
@@ -79,5 +83,41 @@
 
 
 </footer>
+    
+    <main id="container">
+        <form id="form">
+            <fieldset>
+                <br>
+            <label for ="location">Name</label>
+            <input type="text"name="location"
+            id="location" required>
+            <br>
+            <br>
+
+            <label for="minimum">Minimum</label>
+            <input type="number"
+            name="minimum"id="minimum" required>
+            <br>
+            <br>
+            <label for="maximum">Maximum</label>
+            <input type="number"
+            name="maximum"id="maximum" required>
+            <br>
+            <br>
+            <label for="AverageCookies">AverageCookies</label>
+            <input type="float"
+            name="AverageCookies"id="AverageCookies" required>
+            <br>
+            <br>
+            <input type="submit" required>
+            <br>
+            <br>
+            </fieldset>
+
+        </form >
+        <div id="shop"></div>
+   </main>
+        <script src="js/app.js"></script>
+    
 </body>
 </html>

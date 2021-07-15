@@ -19,7 +19,7 @@ function Shop(location, minimum, maximum, AverageCookies) {
     this.Cookieseachhr=[];
     this.getrandomcustomers();
     this.getAverageCookies();
-    console.log(this);
+    
     shops.push(this);
 }
 
@@ -46,12 +46,12 @@ let Paris = new Shop("Paris", 20, 38, 2.3);
 let Lima = new Shop("Lima", 2, 16, 4.6);
 
 
-console.log(seatle);
+
 
 console.log(shops);
 
 for (let i = 0; i < shops.length; i++) {
-    console.log(shops[i]);
+   
     shops[i].getrandomcustomers();
     shops[i].getAverageCookies();
 
@@ -68,7 +68,9 @@ if (i==13) {
 }
 
 let parent = document.getElementById('shop');
+
 console.log(shops);
+
 
 let table = document.createElement('table');
 parent.appendChild(table);
@@ -118,9 +120,12 @@ Shop.prototype.render = function () {
 }
 
 
+
+let footerRow;
+
 function footer() {
  let totalAll=0;
-    let footerRow = document.createElement('tr');
+     footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
@@ -140,14 +145,35 @@ function footer() {
     footerRow.appendChild(firstTh);
     firstTh.textContent =totalAll;
 }
-console.log(shops);
+
 header();
 for (let i = 0; i < shops.length; i++) {
     shops[i].getrandomcustomers();
     shops[i].getAverageCookies();
     shops[i].render();
 }
+
+
+let form=document.getElementById('form');
+form.addEventListener('submit',formsSub);
+function formsSub(event) {
+    event.preventDefault();
+   
+    let location=event.target.location.value;
+    let minimum=parseInt(event.target.minimum.value);
+    console.log(event);
+    let maximum=parseInt(event.target.maximum.value);
+    let AverageCookies=parseInt(event.target.AverageCookies.value);
+    let newName= new Shop(location, minimum, maximum, AverageCookies);
+
+    footerRow.textContent =``;
+    newName.getrandomcustomers();
+    newName.getAverageCookies();
+    newName.render();
+
+
 footer();
+
 let script1=document.createElement('script');
 parent.appendChild(script1);
 
@@ -178,4 +204,8 @@ let image4=document.createElement('img');
 image4.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/fish.jpg?raw=true";
 parent.appendChild(image4);
 image4.textContent="Enjoys it Families ";
+
+}
+
+footer();
 
