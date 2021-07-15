@@ -65,6 +65,7 @@ if (i==13) {
     }
  
 }
+
 let parent = document.getElementById('shop');
 
 let table = document.createElement('table');
