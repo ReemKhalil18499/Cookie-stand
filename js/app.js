@@ -19,7 +19,7 @@ function Shop(location, minimum, maximum, AverageCookies) {
     this.Cookieseachhr=[];
     this.getrandomcustomers();
     this.getAverageCookies();
-    
+    console.log(this);
     shops.push(this);
 }
 
@@ -46,11 +46,11 @@ let Paris = new Shop("Paris", 20, 38, 2.3);
 let Lima = new Shop("Lima", 2, 16, 4.6);
 
 
+console.log(seatle);
 
-
-
+console.log(shops);
 for (let i = 0; i < shops.length; i++) {
-   
+    console.log(shops[i]);
     shops[i].getrandomcustomers();
     shops[i].getAverageCookies();
 
@@ -65,9 +65,8 @@ if (i==13) {
     }
  
 }
-
 let parent = document.getElementById('shop');
-
+console.log(shops);
 let table = document.createElement('table');
 parent.appendChild(table);
 
@@ -104,10 +103,10 @@ Shop.prototype.render = function () {
     dataRow.appendChild(totalTd);
     totalTd.textContent = summ
 }
-let footerRow;
+
 function footer() {
  let totalAll=0;
-     footerRow = document.createElement('tr');
+    let footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
@@ -127,7 +126,7 @@ function footer() {
     footerRow.appendChild(firstTh);
     firstTh.textContent =totalAll;
 }
-
+console.log(shops);
 header();
 for (let i = 0; i < shops.length; i++) {
     shops[i].getrandomcustomers();
@@ -136,27 +135,49 @@ for (let i = 0; i < shops.length; i++) {
 }
 
 
-let form=document.getElementById('form');
-form.addEventListener('submit',formsSub);
+let forms=document.getElementById('form');
+forms.addEventListener('submit',formsSub);
 function formsSub(event) {
     event.preventDefault();
    
     let location=event.target.location.value;
     let minimum=parseInt(event.target.minimum.value);
-    console.log(event);
     let maximum=parseInt(event.target.maximum.value);
     let AverageCookies=parseInt(event.target.AverageCookies.value);
-    let newName= new Shop(location, minimum, maximum, AverageCookies);
+    let newLocation = new Shop(location, minimum, maximum, AverageCookies);
 
-    footerRow.textContent =``;
-    newName.getrandomcustomers();
-    newName.getAverageCookies();
-    newName.render();
+footerRow.textContent =``;
+newLocation.getrandomcustomers();
+    newLocation.getAverageCookies();
+    newLocation.render();
 
 
 footer();
-
 }
 
-footer();
+
+// let imagetwo=document.getElementById('image2')
+// let image2=document.createElement('img');
+//     image2.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/salmon.png?raw=true";
+// parent.appendChild(image2);
+// image2.textContent="Salmon Cutter";
+
+// let p2 = document.createElement('p');
+//     parent.appendChild(p2);
+//     p2.textContent="Join us with your family and friends ! 20% OFF for a limited time !" ;
+// let imagethree=document.getElementById('image3')
+// let image3=document.createElement('img');
+// image3.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/family.jpg?raw=true";
+// parent.appendChild(image3);
+// image3.textContent="Enjoys it Families ";
+
+
+// let imagefour=document.getElementById('image4')
+// let image4=document.createElement('img');
+// image4.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/fish.jpg?raw=true";
+// parent.appendChild(image4);
+// image4.textContent="Enjoys it Families ";
+
+// }
+
 

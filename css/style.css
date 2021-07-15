@@ -7,3 +7,29 @@
     border: 1px solid black;
     border-collapse: collapse;
   }
+  body{
+    background-color: lightyellow;
+  }
+  h1 {
+    color: brown;
+  }
+   div h2 {
+     color: darksalmon;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+   div h5 {color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+    h4{
+      color:darkmagenta ;
+    }
+    p {
+      color:darkturquoise;
+      font-family: fantasy;
+    }
+
+ 
+
+
+
