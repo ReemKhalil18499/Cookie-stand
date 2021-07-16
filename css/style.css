@@ -29,7 +29,33 @@
       font-family: fantasy;
     }
 
- 
+    fieldset{
+      border-radius: 25px;
+      background-color:darksalmon;
+      padding: 20px;
+      width: 50.6%;
+      height: 220px;
+      display:inline-block;
+    }
 
-
+label{
+  color: brown;
+  font-family: fantasy;
+}
+nav input {
+color: brown;
+background-color: lightcoral;
+font-family: fantasy;
+height: 40px;
+width: 90px;
+}
+#shop{
+  color: brown;
+  background-color: lightpink;
+  width:50.6%;
+  border-radius: 25px;
+  border: 2px solid ;
+  padding: 20px;
+  height: 150px;
+}
 

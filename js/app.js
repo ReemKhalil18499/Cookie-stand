@@ -154,30 +154,3 @@ newLocation.getrandomcustomers();
 
 footer();
 }
-
-
-// let imagetwo=document.getElementById('image2')
-// let image2=document.createElement('img');
-//     image2.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/salmon.png?raw=true";
-// parent.appendChild(image2);
-// image2.textContent="Salmon Cutter";
-
-// let p2 = document.createElement('p');
-//     parent.appendChild(p2);
-//     p2.textContent="Join us with your family and friends ! 20% OFF for a limited time !" ;
-// let imagethree=document.getElementById('image3')
-// let image3=document.createElement('img');
-// image3.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/family.jpg?raw=true";
-// parent.appendChild(image3);
-// image3.textContent="Enjoys it Families ";
-
-
-// let imagefour=document.getElementById('image4')
-// let image4=document.createElement('img');
-// image4.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/fish.jpg?raw=true";
-// parent.appendChild(image4);
-// image4.textContent="Enjoys it Families ";
-
-// }
-
-
