@@ -48,40 +48,15 @@ let Lima = new Shop("Lima", 2, 16, 4.6);
 
 console.log(seatle);
 
-console.log(shops);
 
-for (let i = 0; i < shops.length; i++) {
-    console.log(shops[i]);
-    shops[i].getrandomcustomers();
-    shops[i].getAverageCookies();
-
-
-if (i==13) {
-    let Total = 0;
-    for (let j=0; j<14; j++) {
-    Total =this.AverageCookies[j]+Total};
-    liElement = document.createElement('li');
-    SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`;
-    }
  
-}
 
 let parent = document.getElementById('shop');
 console.log(shops);
-
 let table = document.createElement('table');
 parent.appendChild(table);
 
 function header() {
-    let h1 = document.createElement('h1');
-    parent.appendChild(h1);
-    h1.textContent="Frank's Fish And Salmon Market";
-
-    let p1 = document.createElement('p');
-    parent.appendChild(p1);
-    p1.textContent="What better way to celebrate the holidays than with Freshly Cooked Salmon our way ? Available now!" ;
-    
     let headerRow = document.createElement('tr');
     table.appendChild(headerRow);
     let firsTh = document.createElement('th');
@@ -97,9 +72,7 @@ function header() {
     firsTh.textContent ="daily location total"
 }
 
-
 Shop.prototype.render = function () {
-    
     let dataRow = document.createElement("tr");
     table.appendChild(dataRow);
     let nameTd = document.createElement("td");
@@ -117,9 +90,9 @@ Shop.prototype.render = function () {
     totalTd.textContent = summ
 }
 
-
 function footer() {
  let totalAll=0;
+
     let footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
@@ -148,34 +121,3 @@ for (let i = 0; i < shops.length; i++) {
     shops[i].render();
 }
 footer();
-let script1=document.createElement('script');
-parent.appendChild(script1);
-
-let imageone=document.getElementById('image1')
-let image1=document.createElement('img');
-    image1.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/chinook.jpg?raw=true";
-parent.appendChild(image1);
-image1.textContent="Salmon";
-
-let imagetwo=document.getElementById('image2')
-let image2=document.createElement('img');
-    image2.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/salmon.png?raw=true";
-parent.appendChild(image2);
-image2.textContent="Salmon Cutter";
-
-let p2 = document.createElement('p');
-    parent.appendChild(p2);
-    p2.textContent="Join us with your family and friends ! 20% OFF for a limited time !" ;
-let imagethree=document.getElementById('image3')
-let image3=document.createElement('img');
-image3.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/family.jpg?raw=true";
-parent.appendChild(image3);
-image3.textContent="Enjoys it Families ";
-
-
-let imagefour=document.getElementById('image4')
-let image4=document.createElement('img');
-image4.src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/fish.jpg?raw=true";
-parent.appendChild(image4);
-image4.textContent="Enjoys it Families ";
-
