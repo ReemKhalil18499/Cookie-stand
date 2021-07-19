@@ -48,23 +48,9 @@ let Lima = new Shop("Lima", 2, 16, 4.6);
 
 console.log(seatle);
 
-console.log(shops);
-for (let i = 0; i < shops.length; i++) {
-    console.log(shops[i]);
-    shops[i].getrandomcustomers();
-    shops[i].getAverageCookies();
 
-
-if (i==13) {
-    let Total = 0;
-    for (let j=0; j<14; j++) {
-    Total =this.AverageCookies[j]+Total};
-    liElement = document.createElement('li');
-    SalmonCookies2.appendChild(liElement);
-    liElement.textContent = `Total is ${Total}`;
-    }
  
-}
+
 let parent = document.getElementById('shop');
 console.log(shops);
 let table = document.createElement('table');
@@ -106,6 +92,7 @@ Shop.prototype.render = function () {
 
 function footer() {
  let totalAll=0;
+
     let footerRow = document.createElement('tr');
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
@@ -154,3 +141,4 @@ newLocation.getrandomcustomers();
 
 footer();
 }
+footer();
