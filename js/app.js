@@ -89,11 +89,11 @@ Shop.prototype.render = function () {
     dataRow.appendChild(totalTd);
     totalTd.textContent = summ
 }
-
+let footerRow = document.createElement('tr');
 function footer() {
  let totalAll=0;
 
-    let footerRow = document.createElement('tr');
+    
     table.appendChild(footerRow);
     let firstTh = document.createElement('th');
     footerRow.appendChild(firstTh);
